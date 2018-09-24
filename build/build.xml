@@ -1,0 +1,4 @@
+<target name="Validationtest">
+      <sf:deploy username="kamalgaur@ucd.demo" password="hehehe123"  serverurl="https://login.salesforce.com" maxPoll="${sf.maxPoll}" deployRoot="./src"  rollbackOnError="true" checkonly="true">
+                  </sf:deploy>
+    </target>
