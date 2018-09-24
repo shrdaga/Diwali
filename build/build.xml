@@ -20,7 +20,7 @@
 	</condition>
 	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
 		<classpath>
-			<pathelement location="C:\Jenkins\workspace\migration_tool/ant-salesforce.jar" />
+			<pathelement location="C:\Jenkins\workspace\migration_tool\ant-salesforce.jar" />
 		</classpath>
 	</taskdef>
 	<!-- ========================================== -->
