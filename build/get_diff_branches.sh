@@ -18,11 +18,5 @@ then
     cat conflicts.txt
     exit 1
 else
-    echo 'Starting git diff'
-    git status -s > diff.txt
-    echo 'Git diff done.'
-    echo 'Clean double quotes'
-    sed -i 's/\"//g' diff.txt
-    echo 'Cleaned. Result:'
-    cat diff.txt
+    echo 'No conflicts found'
 fi
