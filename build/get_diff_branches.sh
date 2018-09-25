@@ -1,6 +1,8 @@
 #!/bin/bash
 export LESSCHARSET=utf-8
-echo $ghprbTargetBranch
+
+targetBranch=$2
+echo $targetBranch
 
 echo 'Starting git diff'
 cd ..
