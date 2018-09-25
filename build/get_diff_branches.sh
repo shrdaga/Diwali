@@ -5,7 +5,7 @@ targetBranch=$2
 echo $targetBranch
 
 echo 'Starting git diff'
-cd ..s
+cd ..
 echo 'Switching to origin/'$targetBranch
 git checkout -f origin/$targetBranch
 echo 'Merging target branch ('$1') into current branch ('origin/$targetBranch')'
