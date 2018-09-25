@@ -28,7 +28,7 @@
 	<!-- ========================================== -->
 	
 	<target name="Validationtest">
-      <sf:deploy username="kamalgaur@ucd.demo" password="hehehe123"  serverurl="https://login.salesforce.com" maxPoll="1000" deployRoot="src"  rollbackOnError="true" checkonly="true">
+      <sf:deploy username="kamalgaur@ucd.demo" password="hehehe123urqa0YMZBsBw6Q5MIWd78iXKc"  serverurl="https://login.salesforce.com" maxPoll="1000" deployRoot="src"  rollbackOnError="true" checkonly="true">
                   </sf:deploy>
     </target>
 
