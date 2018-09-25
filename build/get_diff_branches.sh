@@ -4,10 +4,10 @@ echo $ghprbTargetBranch
 
 echo 'Starting git diff'
 cd ..
-echo 'Switching to origin/'$ghprbTargetBranch
-git checkout -f origin/$ghprbTargetBranch
-echo 'Merging target branch (origin/'$1') into current branch (origin/'$ghprbTargetBranch')'
-git merge --no-commit --no-ff origin/$1
+echo 'Switching to origin/'$targetName
+git checkout -f origin/$targetName
+echo 'Merging target branch ('$1') into current branch ('origin/$targetBranch')'
+git merge --no-commit --no-ff $1
 echo 'Merged. Looking for conflicts'
 git ls-files -u | awk '{$1=$2=$3=""; print $0}' | awk '{ sub(/^[ \t]+/, ""); print }' | sort -u > conflicts.txt
 if [ -s conflicts.txt ]
