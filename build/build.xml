@@ -27,7 +27,21 @@
 	<!-- Deployment targets                         -->
 	<!-- ========================================== -->
 	
-	<target name="Validationtest">
+	<target name="sf_prepare_deployment">
+		<echo message="START: Create diff dir" />
+		<echo message="Checking against targer: ${target}" />
+		<mkdir dir="../${diffDir}" />
+		<mkdir dir="../${diffDir}/src" />
+		<exec executable="C:\Program Files\Git\bin\bash.exe" osfamily="windows" failonerror="true">
+			<arg value="${scriptName}.sh" />
+			<arg value="${target}" />
+			<arg value="${targetName}" />
+		</exec>
+		
+
+	</target>
+	
+	<target name="Validationtest" depends="sf_prepare_deployment">
       <sf:deploy username="kamalgaur@ucd.demo" password="hehehe123urqa0YMZBsBw6Q5MIWd78iXKc"  serverurl="https://login.salesforce.com" maxPoll="1000" deployRoot=".././src"  rollbackOnError="true" checkonly="true">
                   </sf:deploy>
     </target>
