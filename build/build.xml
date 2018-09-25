@@ -30,8 +30,6 @@
 	<target name="sf_prepare_deployment">
 		<echo message="START: Create diff dir" />
 		<echo message="Checking against targer: ${target}" />
-		<mkdir dir="../${diffDir}" />
-		<mkdir dir="../${diffDir}/src" />
 		<exec executable="C:\Program Files\Git\bin\bash.exe" osfamily="windows" failonerror="true">
 			<arg value="${scriptName}.sh" />
 			<arg value="${target}" />
